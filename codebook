@@ -7,9 +7,8 @@
 'Activity ID':
     This was originally a 1-6 number, but was through run_analysis.R converted into more descriptive activity names such as 'Walking'.    
     
-Columns 3:563 in the data frames df_merge and df_means:
-    Each of these 561 columns is a unique activity tracker measurement obtained from the file 'features.txt' with names such as 'tBodyAcc-max()-X'.
-
-
+Columns 3:68 in the data frames df_merge and df_means:
+    Each of these 66 columns is a unique activity tracker measurement obtained from the file 'features.txt' with names such as 'tBodyAcc-mean()-X'. 
+    Specifically, these are means or standard deviations extracted from an initial 561 measurements. 
 
 
