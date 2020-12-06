@@ -69,6 +69,7 @@ pathTofiles <- "~/Desktop/Coursera_Courses/Getting_and_Cleaning_Data/UCI Har Dat
         new_actID <- gsub("5", "Standing", new_actID)
         new_actID <- gsub("6", "Laying", new_actID)
         df_merge$Activity_ID <- new_actID 
+
 #Create new, tidy data set which contains the average of each variable for each activity and for each subject:                
         library(stats)
         df_means <- as.data.frame(aggregate(df_merge[3:68], by = list(df_merge$Subject_ID,df_merge$Activity_ID), mean))
