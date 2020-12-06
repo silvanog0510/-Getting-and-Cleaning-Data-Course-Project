@@ -15,5 +15,5 @@ Next, df_test and df_train are merged.Then the means and standard deviations for
 
 Next, the 'Activity_ID' numbers are changed to more descriptive titles (which are contained in the 'activity_labels.txt' file).
 
-Lastly, a second tidy data set is created that is a data frame containing the means for each of the 561 measurements, grouped by 'Subject_ID' and by 'Activity_ID'.
+Lastly, a second tidy data set ('df_means') is created that is a data frame containing the means for each of the 561 measurements, grouped by 'Subject_ID' and by 'Activity_ID' for a total of 180 rows, 563 columns. There is one row for every unique combination of 'Subject_ID' and 'Activity_ID'. 
 
