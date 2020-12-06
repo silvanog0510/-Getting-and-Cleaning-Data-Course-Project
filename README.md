@@ -13,7 +13,7 @@ Next, code for df_train is performed which creates a similar data frame for the 
 
 Next, df_test and df_train are merged.
 
-Next, the variable columns containing the terms 'mean' and 'std' (standard deviation) are kept while the rest of the 561 columns are removed. 
+Next, the variable columns containing the terms 'mean' and 'std' (standard deviation) are kept while the rest of the columns are removed. 
 
 Next, the 'Activity_ID' numbers are changed to more descriptive titles (which are contained in the 'activity_labels.txt' file).
 
