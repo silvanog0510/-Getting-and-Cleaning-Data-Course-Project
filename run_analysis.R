@@ -1,14 +1,14 @@
 #using ncol(), and View() I determined the measurements of the .txt files of interest:
-# X_test is 561 columns, 2,947 observations
-# y_test is 1 column, 2,947 observations
-# subject_test is 1 column, 2,947 observations
-
-# X_train is 561 columns, 7,352 observations
-# y_train is 1 column, 7,352 observations
-# subject_train is 1 column, 7,532 observations
-
-#features.txt is 561 labels
-#activity_labels is 6 labels (1-6 numbering)
+        # X_test is 561 columns, 2,947 observations
+        # y_test is 1 column, 2,947 observations
+        # subject_test is 1 column, 2,947 observations
+        
+        # X_train is 561 columns, 7,352 observations
+        # y_train is 1 column, 7,352 observations
+        # subject_train is 1 column, 7,532 observations
+        
+        #features.txt is 561 labels
+        #activity_labels is 6 labels (1-6 numbering)
 
 #set the path to where the downloaded files are kept:
 pathTofiles <- "~/Desktop/Coursera_Courses/Getting_and_Cleaning_Data/UCI Har Dataset"
@@ -70,6 +70,17 @@ pathTofiles <- "~/Desktop/Coursera_Courses/Getting_and_Cleaning_Data/UCI Har Dat
         new_actID <- gsub("6", "Laying", new_actID)
         df_merge$Activity_ID <- new_actID 
 
+#Rename the column/variable names to be more descriptive:
+        names(df_merge) <-  sub("^[0-9]{1,2}","",names(df_merge))
+        names(df_merge) <-  gsub('^t',"TimeDomain.",names(df_merge))
+        names(df_merge) <-  gsub('^f',"FrequencyDomain.",names(df_merge))
+        names(df_merge) <-  gsub('Acc',"Acceleration",names(df_merge))
+        names(df_merge) <-  gsub('Jerk',"Sudden",names(df_merge))
+        names(df_merge) <-  gsub('Gyro',"AngularVelocity",names(df_merge))
+        names(df_merge) <-  gsub('Mag',"Magnitude",names(df_merge))
+        names(df_merge) <-  gsub('\\.mean',".Mean",names(df_merge))
+        names(df_merge) <-  gsub('\\.std',".StandardDeviation",names(df_merge))
+        
 #Create new, tidy data set which contains the average of each variable for each activity and for each subject:                
         library(stats)
         df_means <- as.data.frame(aggregate(df_merge[3:68], by = list(df_merge$Subject_ID,df_merge$Activity_ID), mean))
@@ -77,4 +88,3 @@ pathTofiles <- "~/Desktop/Coursera_Courses/Getting_and_Cleaning_Data/UCI Har Dat
         colnames(df_means)[2] <- "Activity_ID"
         
         
-       
