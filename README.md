@@ -17,5 +17,7 @@ Next, the variable columns containing the terms 'mean' and 'std' (standard devia
 
 Next, the 'Activity_ID' numbers are changed to more descriptive titles (which are contained in the 'activity_labels.txt' file).
 
+Next, the variable/columns names are changed to be more descriptive. 
+
 Lastly, a second tidy data set ('df_means') is created that is a data frame containing the means for each of the 66 'mean' and 'std' measurements, grouped by 'Subject_ID' and by 'Activity_ID' for a total of 180 rows, 68 columns. There is one row for every unique combination of 'Subject_ID' and 'Activity_ID'. 
 
