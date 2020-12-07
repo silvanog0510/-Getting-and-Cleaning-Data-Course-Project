@@ -1,0 +1,14 @@
+
+##This is the codebook for run_analysis.R
+
+'Subject ID':
+    This is a number from 1-30 that is used to identify the subject from which activity tracker data was collected. 
+
+'Activity ID':
+    This was originally a 1-6 number, but was through run_analysis.R converted into more descriptive activity names such as 'Walking'.    
+    
+Column Names 3:68 in the data frames df_merge and df_means:
+    Each of these 66 columns is a unique activity tracker measurement obtained from the file 'features.txt' with names such as 
+    'TimeDomain.BodyAcceleration-mean()-X'. The names were adjusted from the originals to be more detailed. Specifically, these 
+    variable/columns are means or standard deviations extracted from a file containing an initial 561 measurements. See codebook.csv for
+    the old names and new more descriptive names.
